@@ -49,7 +49,7 @@ const car = {
 
 const pizzaToppings2 = ['Pineapple', 'Olives', 'Anchovies'];
 
-controversialPizzaToppings = [...pizzaToppings2]
+ const controversialPizzaToppings = [...pizzaToppings2]
 
 console.log("Ex4 : "+ controversialPizzaToppings);
 
@@ -86,3 +86,68 @@ const car2 = {
  userProfile[propertyName] = "Haroon";
  console.log("Ex6 : ")
  console.log( userProfile)
+
+
+//  Exercise 8: Default parameters:
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+
+// 1. `cat`
+
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+
+ const fun = (noun = 'cat',adjective = 'white') => {
+
+    return "The "+noun +" is "+adjective;
+ }
+
+ console.log("Ex8 : ")
+ console.log( fun())
+
+
+
+// Exercise 9: Ternary operator:
+ // Convert the following `if...else` statement in to a ternary:
+
+// let pizza = 'tasty';
+
+// if (pizza === 'tasty') {
+// //   console.log('yum');
+// } else {
+// //   console.log('yuck');
+// }
+
+ let pizza ='tasty' ? "yum" : "yuck";
+ console.log("Ex9 : "+ pizza);
+
+
+
+//  Exercise 10: Boolean gates:
+// 1)
+const localLangConfig = "ar"; 
+const LANG = localLangConfig || 'en';
+console.log("Ex10 : ")
+console.log('Language setting:', LANG); 
+
+//  2)
+const userSavedTheme = 'dark'; 
+const USER_THEME = userSavedTheme || 'light';
+
+console.log('User theme setting:', USER_THEME);
+
+
+
+// Exercise 11: Optional chaining:
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+const adventurer = {
+    name: 'Alice',
+  };
+  
+  let cat = adventurer.age?.name;
+  
+  console.log(cat);
+
+  
